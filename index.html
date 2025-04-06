@@ -8,11 +8,27 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
+      height: 100vh;
+      background: #f0f0f0;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
-      background: #f0f0f0;
+    }
+
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .header-img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      margin-top: 70px;
+      margin-bottom: 70px;
+
     }
 
     .container {
@@ -79,11 +95,16 @@
     }
   </style>
 </head>
-<body>
-  <div class="container">
-    <h1>Are you from RBC?</h1>
-    <button onclick="checkRBC()">Yes</button>
-    <button onclick="notRBC()">No</button>
+<body class="bod">
+  <div class="wrapper">
+    <h1>👋 Welcome RBC Team (Noelle & Lauren). Its Akshay! 👋</h1>
+    <img class="header-img" src="rbc-header.png" alt="RBC Header Image" width="500">
+    
+    <div class="container">
+      <h2>Are you from RBC?</h2>
+      <button onclick="checkRBC()">Yes</button>
+      <button onclick="notRBC()">No</button>
+    </div>
   </div>
 
   <div class="confetti" id="confetti">
@@ -115,7 +136,7 @@
           video.onended = () => {
             window.location.href = "main.html";
           };
-        }, 3000); // Confetti duration
+        }, 3000);
       }
     }
 
